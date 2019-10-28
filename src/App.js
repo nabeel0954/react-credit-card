@@ -2,24 +2,23 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({ src, title,paragraph,Link }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <img src={src} alt="Image 1"  className="card-img-top"/>
+     <div className="card text-center">
+       <div className="overflow">
+     </div>
+     <div className="card-body text-dark">
+       <h4 className="card-title">{title}</h4>
+       <p className="card-text text-secondary">  
+       {paragraph}
+       </p>
+       <a href={Link} className="btn btn-outline-success">Go Anywhere</a>
+     </div>
+     </div>
+     </div>
+
   );
 }
 
